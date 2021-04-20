@@ -25,7 +25,7 @@
 
 var framePath = "orchid/"; //Define file path for your images
 var highResPath = "orchid/"; //if you have a downloadable high res image, define its path here.  
-var nFrames = 250; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images. 
+var nFrames = 260; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images. 
 var fileType = ".png"; //Define your image file type.
 var pageLengt = 20000; // this defines over what distance, in pixels, your image sequence should be displayed. esentally it defines how speady you scroll trough all the individual images. make shure your page has at least this lengt in px aswel.
 
@@ -36,6 +36,7 @@ var pageLengt = 20000; // this defines over what distance, in pixels, your image
 var images = []; //Define array for images
 var numberSequence = []; //Define array for number sequence
 var higresimages =[]; //Define array for higres images
+var higresimagesplum =[]; //Define array for higres images
 
 
 // ad images with path to array
@@ -58,11 +59,7 @@ for (i = 0; i < (nFrames); i++) {//loop through all pictures
 }
 
 
-// ad numbers to numbersequence array
 
-for (i = 0; i < (nFrames); i++) {
-    numberSequence.push(i); //Add N numbers to array
-}
 
 
 // TweenMax can tween any property of any object. We use this object to cycle through the array
