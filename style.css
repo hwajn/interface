@@ -1,9 +1,17 @@
+*img {background-blend-mode:multiply;background-color:black;}
+
+
 body{
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
 	background-color: black;
+    
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
 .trigger{
 	position: absolute;
 	left: 50%;
@@ -57,6 +65,7 @@ body{
 	height: 100%;
 	display: block;
   margin: auto;
+  background-blend-mode: multiply;
 }
 
 .dllink a{
