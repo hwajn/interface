@@ -2,11 +2,24 @@
 
 
 body{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: playfair;
+	font-size:80pt;
+	color:white;
 	margin: 0;
 	background-color: black;
+	background-image: "homepage.jpg";
+	background-position:center;
+	background-repeat:repeat;
+	
+	
     
 }
+
+a{text-decoration:none;display: inline-block;     
+	position: relative;    
+	z-index: 1;     
+	padding: 2em;     
+	margin: -2em;}
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -40,12 +53,16 @@ body{
 .frame {
 	position: fixed;
     left: 50%;
-    top: 50%;
+    top: 42%;
     transform: translate(-50%, -50%);
-	width: 100%;
-	height: 80vh;
+	width: 90%;
+	height: 70vh;
 	opacity: 1;
-	}
+
+	
+}
+
+
 
 .overlay {
 	position: fixed;
@@ -54,19 +71,24 @@ body{
     top: 50%;
 	transform: translate(-50%, -50%);
 	mix-blend-mode: difference;
+	z-index:1000000;
 }	
 .framenumber{
 	font-size: 24vh;
-	color: transparent;
+	color: white;
 
 }
 
 .image {
-	height: 100%;
+	height: 120%;
 	display: block;
   margin: auto;
-  background-blend-mode: multiply;
+  background-blend-mode: difference;
+  mix-blend-mode:difference;
+  z-index:10;
 }
+
+
 
 .dllink a{
 	position: fixed;
@@ -95,6 +117,8 @@ body{
 .pageExtender {
 	height: 20800px;
 	background-color:black;
+
+	background-blend-mode: difference;
 }
 
 @media screen and (max-width: 420px) {
@@ -107,4 +131,12 @@ body{
 		}
  
 	}
+
+
+
+	@font-face {
+		font-family: 'playfair';
+		src: url(PlayfairDisplay-Black.ttf); /* IE9 Compat Modes */
+		src: url('PlayfairDisplay-Black.woff') format('woff');
+	  }
 

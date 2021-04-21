@@ -20,12 +20,28 @@
 //GSAP animation https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js
 //scrollmagic debug indicators https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js
 
+//https://stackoverflow.com/questions/3646036/preloading-images-with-javascript preloading images??
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+//-- usage --//
+preload(
+    "bouquet/"
+)
+
 
 // define these vars to your needs
 
-var framePath = "orchid/"; //Define file path for your images
-var highResPath = "orchid/"; //if you have a downloadable high res image, define its path here.  
-var nFrames = 260; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images. 
+
+
+var framePath = "bouquet/"; //Define file path for your images
+var highResPath = "bouquet/"; //if you have a downloadable high res image, define its path here.  
+var nFrames = 250; //Define amount of images. counting starts at 0, to have it count to 400 you would have to ad 401 images. 
 var fileType = ".png"; //Define your image file type.
 var pageLengt = 20000; // this defines over what distance, in pixels, your image sequence should be displayed. esentally it defines how speady you scroll trough all the individual images. make shure your page has at least this lengt in px aswel.
 
@@ -36,7 +52,8 @@ var pageLengt = 20000; // this defines over what distance, in pixels, your image
 var images = []; //Define array for images
 var numberSequence = []; //Define array for number sequence
 var higresimages =[]; //Define array for higres images
-var higresimagesplum =[]; //Define array for higres images
+
+
 
 
 // ad images with path to array
@@ -45,6 +62,7 @@ function pad(number, length) { // pad numbers with leading zeros for your image 
     var str = '' + number;
         while (str.length < length) { str = '0' + str; }
         return str;
+        
 }
 
 for (i = 0; i < (nFrames); i++) {//loop through all pictures
@@ -56,6 +74,12 @@ for (i = 0; i < (nFrames); i++) {//loop through all pictures
 
 for (i = 0; i < (nFrames); i++) {//loop through all pictures
     higresimages.push(highResPath +pad(i, 4) + fileType); //Add the higResPath to the array with pad numbers and file type
+}
+
+// ad numbers to numbersequence array
+
+for (i = 0; i < (nFrames); i++) {
+    numberSequence.push(i); //Add N numbers to array
 }
 
 
@@ -74,6 +98,7 @@ var ImageSequenceTween = new TimelineMax()
         repeat: 0,									// repeat 3 times
         immediateRender: true,			// load first image automatically
         ease: Linear.easeNone,			// show every image the same ammount of time
+        
         onUpdate: function () {
           $("#imgsequence").attr("src", images[obj.curImg]);// set the image source
           $("#framesequencenumber").text(numberSequence[obj.curImg]);// set sequence number
@@ -97,6 +122,7 @@ var scene = new ScrollMagic.Scene({
     triggerHook: 0,
     offset: -100,
     duration: pageLengt,
+    
 })
                 
 .setTween(ImageSequenceTween)
