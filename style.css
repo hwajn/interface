@@ -5,7 +5,7 @@ body{
 	font-family: playfair;
 
 	font-size:30pt;
-	color:white;
+	color:#551A8B;
 	margin: 0;
 	background-color: black;
 	background-image: "homepage.jpg";
@@ -20,7 +20,10 @@ a{text-decoration:none;display: inline-block;
 	position: relative;    
 	z-index: 1;     
 	padding: 2em;     
-	margin: -2em;}
+	margin: -2em;
+	a:hover {
+		color: white;
+	  }}
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -74,11 +77,7 @@ a{text-decoration:none;display: inline-block;
 	mix-blend-mode: difference;
 	z-index:1000000;
 }	
-.framenumber{
-	font-size: 24vh;
-	color: white;
 
-}
 
 .image {
 	height: 120%;
@@ -109,7 +108,7 @@ a{text-decoration:none;display: inline-block;
 	font-size: 16px;
 	font-weight: 100;
 	padding: 13px 23px ;
-	background-color: #000000;
+	background-color: black;
 	text-decoration: none;
 	display: inline-block;
 	cursor: pointer;
