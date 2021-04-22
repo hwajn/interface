@@ -4,23 +4,7 @@
     </head>
 <body>
 
-
-    <div class="section section-1">
-      <div class="box box-1">ONE</div>
-    </div>
-    <div class="section section-2">
-      <div class="box box-2">TWO</div>
-    </div>
-    <div class="section section-3">
-      <div class="box box-3">THREE</div>
-    </div>
-    <div class="section section-4">
-        <div class="box box-3">FOUR</div>
-      </div>
-      <div class="section section-5">
-        <div class="box box-3">FIVE</div>
-      </div>
-    
+<div class="space"></div>
 
 
 
@@ -40,9 +24,27 @@
     
         <img  class="image" id="imgsequence" src="bouquet/">
         
-
     </div>
-    
+
+
+
+    <div class="section section-1">
+        <div class="box box-1"><img src="2.gif" style="transform:scale(.75);"></div>
+      </div>
+      <div class="section section-2">
+        <div class="box box-2"><img src="3.gif" style="transform:scale(.75);"></div>
+      </div>
+      <div class="section section-3">
+        <div class="box box-3">THREE</div>
+      </div>
+      <div class="section section-4">
+          <div class="box box-3">FOUR</div>
+        </div>
+        <div class="secondsection section-5">
+          <div class="secondbox box-3">FIVE</div>
+        </div>
+      
+  
     <div class="pageExtender"><img src="saddance.gif" style="position:absolute;"></div>
 
     <div class="dllink">
@@ -61,6 +63,7 @@
 
 
     <script>
+            /////https://scrollmagic.io/examples/basic/scene_manipulation.html
      TweenLite.defaultEase = Linear.easeNone;
 var controller = new ScrollMagic.Controller();
 
@@ -68,19 +71,46 @@ $(".section").each(function(i) {
   var target = $(this).find(".box");
   var tl = new TimelineMax();
   
-  tl.from(target, 0.25, { opacity:0 });
-  tl.to(target, 0.25, { opacity:0 }, 0.75);
+  tl.from(target, 1.5, { opacity:0 });
+  tl.to(target, 1.5, { opacity:0 }, 1.5);
   
   new ScrollMagic.Scene({
     triggerElement: this,
     triggerHook: 0.5,
-    duration: '150%'
+    duration: '500%'
   })
     .setPin(this)
     .setTween(tl)
     .addTo(controller);
 });
     </script>
+
+
+
+
+<script>
+    /////https://scrollmagic.io/examples/basic/scene_manipulation.html
+    
+    TweenLite.defaultEase = Linear.easeNone;
+var controller = new ScrollMagic.Controller();
+
+$(".secondsection").each(function(i) {
+ var target = $(this).find(".secondbox");
+ var tl = new TimelineMax();
+ 
+ tl.from(target, 1.5, { opacity:0 });
+ tl.to(target, 1.5, { opacity:0 }, 1.5);
+ 
+ new ScrollMagic.Scene({
+   triggerElement: this,
+   triggerHook: 0.5,
+   duration: '500%'
+ })
+   .setPin(this)
+   .setTween(tl)
+   .addTo(controller);
+});
+   </script>
 
     
 

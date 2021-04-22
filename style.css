@@ -3,7 +3,8 @@
 
 body{
 	font-family: playfair;
-	font-size:80pt;
+
+	font-size:30pt;
 	color:white;
 	margin: 0;
 	background-color: black;
@@ -142,17 +143,36 @@ a{text-decoration:none;display: inline-block;
   height: 40px;
 
 }
+.box-1{transform:translate(-100px,-200px);mix-blend-mode:overlay;}
+.box-2{ transform:translate(100px,-500px); background-color: none; 	mix-blend-mode: exclusion;z-index:100000000000000000;}
+.box-4{ background-color: none;		mix-blend-mode: difference; z-index:100000000000000000;}
 
-.box-2{ background-color: none; }
-.box-3{ background-color: none; }
-.box-4{ background-color: none; }
-.box-5{ background-color: none; }
 
 .space{
-  min-height: 80vh;
-  width: 30px;
-  background-color: lightgray;
+  min-height: 100vh;
+  width: 10px;
+  
 }
+
+
+
+.secondsection{
+    padding: 30px;
+    margin: 50px;
+    min-height: 50vh;
+  }
+
+.secondbox{
+  width: 50%;
+  height: 40px;
+
+}
+
+
+.box-3{ background-color: none; 	mix-blend-mode: difference;z-index:100000000000000000;transform:translate(500px,0px);}
+
+.box-5{ background-color: none; 	mix-blend-mode: difference;z-index:100000000000000000;right:0;transform:translate(500px,0px);}
+
 
 
 
@@ -181,8 +201,8 @@ a{text-decoration:none;display: inline-block;
 
 	@font-face {
 		font-family: 'playfair';
-		src: url(PlayfairDisplay-Black.ttf); /* IE9 Compat Modes */
-		src: url('PlayfairDisplay-Black.woff') format('woff');
+		src: url(PlayfairDisplay-Regular.ttf); /* IE9 Compat Modes */
+		src: url('PlayfairDisplay-Regular.woff') format('woff');
 	  }
 
 
