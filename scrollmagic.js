@@ -1,5 +1,5 @@
  
-//thanks to https://codepen.io/mkswiss/pen/OJVWRpE for this code:
+
 
 
 
@@ -122,14 +122,14 @@ var ImageSequenceController = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({
     triggerElement: ".trigger", 
     triggerHook: 0,
-    offset: -100,
+    offset: 0, 
     duration: pageLengt,
     
 })
                 
 .setTween(ImageSequenceTween)
 //.addIndicators() // add indicators (requires plugin)
-.addTo(ImageSequenceController);
+.addTo(ImageSequenceController)
 
 
     
