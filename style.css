@@ -1,6 +1,10 @@
+
+
 html{background-color:black;}
 body {
 	height:10000px;
+	font-family:helvetica, sans-serif;
+	font-weight:100;
 	
 }
 
@@ -17,14 +21,15 @@ background: transparent; }
 	height:90vh;
 	top:50%;
 	left:50%;
-	transform:translate(-648px,-369px);
+	transform:translate(-45vw,-45vh);
 	background-color:black;
-	background-size:cover;		
+	background-size:cover;	
+	border: none;
 }
 
 
 
-#div1, #div2, #div3, #div4 {
+#div1, #div2, #div3, #div4, #div5, #div6 {
 	color:transparent;
 	position:absolute;
 	z-index:10;
@@ -33,46 +38,50 @@ background: transparent; }
 }
 
 
-#div1 {top:5000px;
+#div1 {top:1200px;
 left:1em;}
-#div2 {top:10000px;
+#div2 {top:2300px;
 left:1em;}
-#div3{top:30000px;
+#div3{top:3200px;
 left:1em;}
-#div4{top:40000px;
+#div4{top:5000px;
 left:1em;}
-#div5{top:100000px;}
+#div5{top:15000px;
+left:1em;}
+#div6{top:100000px;
+	left:1em;}
 
 
 
 
-#div11, #div22, #div33, #div44 {
+#div11, #div22, #div33, #div44, #div55, #div66 {
 	color:blueviolet;
 	position:fixed;
-	z-index:10;
-	font-size:3em;
+	z-index:300;
+	font-size:2em;
 	cursor:pointer;
+	margin-left:30px;
+
+	
 }
 
 #div11:hover, #div22:hover, #div33:hover, #div44:hover {
 color:#E9FFF2;
 }
 
-#div11 {top:100px;
-left:0;}
-#div22 {top:100px;
-left:50px;}
-#div33{top:100px;
-left:100px;}
-#div44{top:100px;
-left:150px;}
+#div11 {top:1em;right:1em;
+}
+#div22 {top:calc(30%);right:1em;
+}
+#div33{top:calc(60%);right:1em;
+}
+#div44{bottom:calc(1em + 30px);right:1em;
+}
+#div55{top:1em;left:0;
+}
 
 
 
-@font-face {
-font-family: ;
-src: url();
-}	
 
 
 
