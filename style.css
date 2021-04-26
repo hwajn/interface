@@ -3,8 +3,8 @@
 html{background-color:black;}
 body {
 	height:10000px;
-	font-family:helvetica, sans-serif;
 	font-weight:100;
+	font-family:bebas;
 	
 }
 
@@ -62,7 +62,9 @@ left:1em;}
 	cursor:pointer;
 	margin-left:30px;
 
-	
+	display: inline-block;     
+	padding: 2em;     
+	margin: -2em; 
 }
 
 #div11:hover, #div22:hover, #div33:hover, #div44:hover {
@@ -77,15 +79,15 @@ color:#E9FFF2;
 }
 #div44{bottom:calc(1em + 30px);right:1em;
 }
-#div55{top:1em;left:0;
+#div55{top:1em;left:1em;
 }
 
 
 
 
+@font-face{
+	font-family: bebas;
+src: url(BebasNeue-Light.ttf);}
 
 
-
-
-
-
+/* from https://stackoverflow.com/questions/11078509/how-to-increase-the-clickable-area-of-a-a-tag-button */
