@@ -17,6 +17,7 @@
 <div id="div22">ii</div>
 <div id="div33">iii</div>
 <div id="div44">v</div>
+<div id="cover"></div>
 
 
 
@@ -30,19 +31,19 @@
 
 
 $("#div11").click(function(){
-        $(document).scrollTo("#div2", 3000)
+        $(document).scrollTo("#div1", 3000)
 })
 
 $("#div22").click(function(){
-        $(document).scrollTo("#div3", 5500)
+        $(document).scrollTo("#div2", 5500)
 })
 
 $("#div33").click(function(){
-        $(document).scrollTo("#div4", 3000)
+        $(document).scrollTo("#div3", 3000)
 })
 
 $("#div44").click(function(){
-        $(document).scrollTo("#div1", 10000)
+        $(document).scrollTo(0, 10000)
 })
 
         let imageFile;
@@ -85,6 +86,13 @@ $("#div44").click(function(){
 
 
     
+
+        $(window).scroll(function(e) {   
+    if($(window).scrollTop() >=29850) {
+       $(window).scrollTop(29850);
+    }
+});
+
 
 
     </script>

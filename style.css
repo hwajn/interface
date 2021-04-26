@@ -1,7 +1,9 @@
+html{background-color:black;}
 body {
 	height:10000px;
-
+	
 }
+
 
 ::-webkit-scrollbar {
 width: 0px;
@@ -11,13 +13,13 @@ background: transparent; }
 	position:fixed;
 	top:0;
 	left:0;
-	width:100vw;
-	height:100vh;
-	/*background-image:url('bouquet/');*/
-	
+	width:90vw;
+	height:90vh;
+	top:50%;
+	left:50%;
+	transform:translate(-648px,-369px);
 	background-color:black;
 	background-size:cover;		
-	overscroll-behavior: none;
 }
 
 
@@ -31,7 +33,7 @@ background: transparent; }
 }
 
 
-#div1 {top:-100px;
+#div1 {top:5000px;
 left:1em;}
 #div2 {top:10000px;
 left:1em;}
