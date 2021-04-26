@@ -1,72 +1,75 @@
 body {
-		height:10000px;
-		overscroll-behavior: none;
+	height:10000px;
+	overflow: hidden;
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; }
+width: 0px;
+background: transparent; }
 
 #main-image {
-		position:fixed;
-		top:0;
-		left:0;
-		width:100vw;
-		height:100vh;
-		/*background-image:url('bouquet/');*/
-		
-		background-color:black;
-		background-size:cover;		
-		overscroll-behavior: none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	/*background-image:url('bouquet/');*/
+	
+	background-color:black;
+	background-size:cover;		
+	overscroll-behavior: none;
 }
 
 
 
 #div1, #div2, #div3, #div4 {
-		color:transparent;
-		position:absolute;
-		z-index:10;
-		font-size:3em;
-		cursor:pointer;
+	color:transparent;
+	position:absolute;
+	z-index:10;
+	font-size:3em;
+	cursor:pointer;
 }
 
 
-#div1 {top:100px;
-	left:1em;}
+#div1 {top:-100px;
+left:1em;}
 #div2 {top:10000px;
-	left:1em;}
+left:1em;}
 #div3{top:30000px;
-	left:1em;}
-#div4{top:70000px;
-	left:1em;}
-	
+left:1em;}
+#div4{top:40000px;
+left:1em;}
+#div5{top:100000px;}
+
+
+
 
 #div11, #div22, #div33, #div44 {
-		color:blueviolet;
-		position:fixed;
-		z-index:10;
-		font-size:3em;
-		cursor:pointer;
+	color:blueviolet;
+	position:fixed;
+	z-index:10;
+	font-size:3em;
+	cursor:pointer;
 }
 
 #div11:hover, #div22:hover, #div33:hover, #div44:hover {
-	color:#E9FFF2;
+color:#E9FFF2;
 }
 
 #div11 {top:100px;
-	left:0;}
+left:0;}
 #div22 {top:100px;
-	left:50px;}
+left:50px;}
 #div33{top:100px;
-	left:100px;}
+left:100px;}
 #div44{top:100px;
-	left:150px;}
+left:150px;}
 
 
 
 @font-face {
-	font-family: ;
-	src: url();
+font-family: ;
+src: url();
 }	
 
 
