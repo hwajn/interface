@@ -49,6 +49,17 @@ left:50%;transform:translate(-45vw,-45vh);"></div>
 
    <script>
    
+   var imagefiles = [
+   "bouquet/thumbs/"];
+
+   function PreLoadAllImages () {
+       imagefiles.forEach(function(image){
+           var img = document.createElement('img');
+           img.src = image;
+           document.body.appendChild(img);});
+       $('img').hide();
+   } 
+   var all_loaded;
 
 //from Ali Qadeer
 
