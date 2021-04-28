@@ -1,11 +1,13 @@
+/*font used is Kepler*/
 
 
 html{background-color:black;}
 body {
 	height:10000px;
 	font-weight:100;
-	font-family:bebas;
+	font-family:kepler;
 	background-color:black;
+	color:#7B8E7B;
 }
 
 
@@ -55,39 +57,41 @@ left:1em;}
 
 
 #div11, #div22, #div33, #div44, #div55, #div66 {
-	color:blueviolet;
+	color:#7B8E7B;
 	position:fixed;
 	z-index:300;
-	font-size:2em;
+	font-size:4em;
 	cursor:pointer;
-	margin-left:30px;
+	margin-left:0px;
 
 	display: inline-block;     
-	padding: 2em;     
-	margin: -2em; 
+	padding: 1em;     
+	margin: -1em; 
 }
 
-#div11:hover, #div22:hover, #div33:hover, #div44:hover {
+#div11:hover, #div22:hover, #div33:hover, #div44:hover,#div55:hover {
 color:#E9FFF2;
 }
 
-#div11 {top:1em;right:1em;
+#div11 {top:.25em;right:calc(.5em);
 }
-#div22 {top:calc(30%);right:1em;
+#div22 {top:calc(25% + .75em);right:calc(.5em);
 }
-#div33{top:calc(60%);right:1em;
+#div33{top:calc(50% + 1.25em);right:.5em;
 }
-#div44{bottom:calc(1em + 30px);right:1em;
+#div44{bottom:.25em;right:.5em;
 }
-#div55{top:1em;left:1em;
+#div55{top:.25em;left:.5em;
 }
 
 
 
 
 @font-face{
-	font-family: bebas;
-src: url(BebasNeue-Light.ttf);}
+	font-family: kepler;
+src: url("Kepler\ Std\ Light\ Condensed\ Display.otf");
+src: url("Kepler\ Std\ Light\ Condensed\ Display.woff");
+rc: url("Kepler\ Std\ Light\ Condensed\ Display.ttf");}
 
 
 /* from https://stackoverflow.com/questions/11078509/how-to-increase-the-clickable-area-of-a-a-tag-button */
