@@ -1,97 +1,86 @@
 /*font used is Kepler*/
+html{scroll-behavior: smooth;  overscroll-behavior: none!important;}
 
-
-html{background-color:black;}
-body {
-	height:10000px;
+body {padding:0;margin:0;
+background: black;
 	font-weight:100;
 	font-family:kepler;
 	background-color:black;
 	color:#7B8E7B;
 }
-
+a{text-decoration: none;}
 
 ::-webkit-scrollbar {
-width: 0px;
-background: transparent; }
+	width: 0px;
+	background: transparent; }
+	
+	#div1, #div2, #div3, #div4, #div5, #div6 {
+		color:transparent;
+		position:absolute;
+		z-index:10;
+		font-size:3em;
+		cursor:pointer;
+	}
+	#one,#two,#three{width:100px;height:100px;z-index:100;position:absolute;}
+	
 
-#main-image {
-	position:fixed;
-	top:0;
-	left:0;
-	width:90vw;
-	height:90vh;
-	top:50%;
-	left:50%;
-	transform:translate(-45vw,-45vh);
-	background-color:black;
-	background-size:cover;	
-	border: none;
+	
+
+	
+	
+	
+	
+	#div11, #div22, #div33, #div44, #div55, #div66 {
+		color:#7B8E7B;
+		position:fixed;
+		z-index:300;
+		font-size:4em;
+		cursor:pointer;
+		margin-left:0px;
+	
+		display: inline-block;     
+		padding: 1em;     
+		margin: -1em; 
+	}
+	
+	#div11:hover, #div22:hover, #div33:hover, #div44:hover,#div55:hover {
+	color:#E9FFF2;
+	}
+	
+	#div11 {top:.25em;right:calc(.5em);
+	}
+	#div22 {top:calc(25% + .75em);right:calc(.5em);
+	}
+	#div33{top:calc(50% + 1.25em);right:.5em;
+	}
+	#div44{bottom:.25em;right:.5em;
+	}
+	#div55{top:.25em;left:.5em;
+	}
+	
+	
+	
+	
+	@font-face{
+		font-family: kepler;
+	src: url("Kepler\ Std\ Light\ Condensed\ Display.otf");
+	src: url("Kepler\ Std\ Light\ Condensed\ Display.woff");
+	rc: url("Kepler\ Std\ Light\ Condensed\ Display.ttf");}
+	
+
+@media only screen and (max-width:500.99px) {
+	body{height:7000px;}
+	html{height:100vh;}
+#scrolly-video{width:100px;z-index:1000;}
+#one{top:0px;background-color:red;}
+#two{top:3500px;background-color: none;}
+#three{top:6900px;background-color: none;overflow-y:hidden;}
+
 }
-
-
-
-#div1, #div2, #div3, #div4, #div5, #div6 {
-	color:transparent;
-	position:absolute;
-	z-index:10;
-	font-size:3em;
-	cursor:pointer;
+@media only screen and (min-width: 501px) {
+	body{height:7000px;}
+#scrolly-video{height:100vh;}
+#one{top:0px;background-color:none;}
+#two{top:3500px;background-color: none;}
+#three{top:6900px;background-color: none;}
 }
-
-
-#div1 {top:1200px;
-left:1em;}
-#div2 {top:2300px;
-left:1em;}
-#div3{top:3200px;
-left:1em;}
-#div4{top:5000px;
-left:1em;}
-#div5{top:15000px;
-left:1em;}
-#div6{top:100000px;
-	left:1em;}
-
-
-
-
-#div11, #div22, #div33, #div44, #div55, #div66 {
-	color:#7B8E7B;
-	position:fixed;
-	z-index:300;
-	font-size:4em;
-	cursor:pointer;
-	margin-left:0px;
-
-	display: inline-block;     
-	padding: 1em;     
-	margin: -1em; 
-}
-
-#div11:hover, #div22:hover, #div33:hover, #div44:hover,#div55:hover {
-color:#E9FFF2;
-}
-
-#div11 {top:.25em;right:calc(.5em);
-}
-#div22 {top:calc(25% + .75em);right:calc(.5em);
-}
-#div33{top:calc(50% + 1.25em);right:.5em;
-}
-#div44{bottom:.25em;right:.5em;
-}
-#div55{top:.25em;left:.5em;
-}
-
-
-
-
-@font-face{
-	font-family: kepler;
-src: url("Kepler\ Std\ Light\ Condensed\ Display.otf");
-src: url("Kepler\ Std\ Light\ Condensed\ Display.woff");
-rc: url("Kepler\ Std\ Light\ Condensed\ Display.ttf");}
-
-
-/* from https://stackoverflow.com/questions/11078509/how-to-increase-the-clickable-area-of-a-a-tag-button */
